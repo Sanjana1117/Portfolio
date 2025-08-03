@@ -18,7 +18,6 @@ const Skills = () => {
     { name: 'Node.js', icon: '🟢', status: 'Server-side development' },
     { name: 'Firebase', icon: '🔥', status: 'Real-time databases' },
     { name: 'Angular', icon: '🅰️', status: 'Frontend framework' }
-
   ];
 
   return (
@@ -30,7 +29,7 @@ const Skills = () => {
       <div className="absolute -top-36 -left-36 w-80 h-80 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full blur-3xl opacity-60 pointer-events-none" />
       <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-gradient-to-tr from-pink-500/20 to-cyan-400/20 rounded-full blur-3xl opacity-40 pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 overflow-x-hidden">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">
             My{' '}
@@ -39,13 +38,13 @@ const Skills = () => {
             </span>
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             {/* Core Skills */}
             <div className="relative group">
               {/* Overlay gradient for subtle glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
 
-              <div className="about-card relative bg-slate-800/70 backdrop-blur-xl rounded-3xl p-10 border border-slate-700/60 shadow-2xl hover:border-cyan-400/50 transition-all duration-300 cursor-default">
+              <div className="about-card relative bg-slate-800/70 backdrop-blur-xl rounded-3xl p-6 md:p-10 border border-slate-700/60 shadow-2xl hover:border-cyan-400/50 transition-all duration-300 cursor-default">
                 <div className="flex items-center mb-10">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-5 shadow-lg">
                     <Code2 className="text-white" size={26} />
@@ -77,7 +76,7 @@ const Skills = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
 
-              <div className="about-card relative bg-slate-800/70 backdrop-blur-xl rounded-3xl p-10 border border-slate-700/60 shadow-2xl hover:border-orange-400/50 transition-all duration-300 cursor-default">
+              <div className="about-card relative bg-slate-800/70 backdrop-blur-xl rounded-3xl p-6 md:p-10 border border-slate-700/60 shadow-2xl hover:border-orange-400/50 transition-all duration-300 cursor-default">
                 <div className="flex items-center mb-10">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-600 rounded-xl flex items-center justify-center mr-5 shadow-lg">
                     <Zap className="text-white" size={26} />
