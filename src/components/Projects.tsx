@@ -43,9 +43,9 @@ const Projects = () => {
               <div className="relative group rounded-2xl overflow-hidden border border-slate-600/40 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-2xl blur opacity-80 group-hover:opacity-100 transition-all duration-300"></div>
                 <img
-                  src={project.image}
+                  src="/cam.jpg"
                   alt={project.title}
-                  className="w-full h-72 object-cover rounded-2xl relative z-10"
+                  className="w-full h-92 object-cover rounded-2xl relative z-10"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent rounded-2xl z-20"></div>
                 <div className="absolute bottom-5 left-5 right-5 z-30">
