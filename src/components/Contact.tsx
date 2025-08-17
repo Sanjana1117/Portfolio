@@ -107,7 +107,7 @@ const Contact = () => {
             {/* View Resume */}
             <div>
               <a
-                href="/Sanjana_resume.pdf"
+                href="/Sanjana.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-tr from-green-500 to-emerald-600 text-white rounded-xl font-semibold text-lg shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-green-400/70 border border-green-700"

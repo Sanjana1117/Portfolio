@@ -20,6 +20,10 @@ const Skills = () => {
     { name: 'Angular', icon: '🅰️', status: 'Frontend framework' }
   ];
 
+  const exploringNext = [
+    'Bootstrap', 'AWS', 'MongoDB', 'TypeScript'
+  ];
+
   return (
     <section
       id="skills"
@@ -41,7 +45,7 @@ const Skills = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             {/* Core Skills */}
             <div className="relative group">
-              {/* Overlay gradient for subtle glow */}
+              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
 
               <div className="about-card relative bg-slate-800/70 backdrop-blur-xl rounded-3xl p-6 md:p-10 border border-slate-700/60 shadow-2xl hover:border-cyan-400/50 transition-all duration-300 cursor-default">
@@ -90,30 +94,23 @@ const Skills = () => {
                       key={skill.name}
                       className="group/learning rounded-2xl p-7 bg-gradient-to-br from-slate-900/80 to-slate-800/60 border border-slate-600/40 shadow-lg hover:shadow-xl hover:border-orange-400/60 transition-all duration-300 cursor-default"
                     >
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
-                          <div
-                            className={`w-14 h-14 bg-gradient-to-br rounded-xl flex items-center justify-center mr-5 shadow-lg transition-all duration-300 ${
-                              skill.color ? skill.color : 'from-indigo-400 to-purple-500'
-                            }`}
-                          >
-                            <span className="text-2xl">{skill.icon}</span>
-                          </div>
-                          <div>
-                            <span className="text-white font-bold text-xl block">{skill.name}</span>
-                            <span className="text-orange-300 text-base font-semibold">{skill.status}</span>
-                          </div>
+                      <div className="flex items-center mb-4">
+                        <div
+                          className={`w-14 h-14 bg-gradient-to-br rounded-xl flex items-center justify-center mr-5 shadow-lg transition-all duration-300 ${
+                            skill.color ? skill.color : 'from-indigo-400 to-purple-500'
+                          }`}
+                        >
+                          <span className="text-2xl">{skill.icon}</span>
                         </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-4 h-4 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full animate-pulse shadow-lg"></div>
-                          <span className="text-orange-400 font-bold text-sm uppercase tracking-wider">
-                            Active
-                          </span>
+                        <div>
+                          <span className="text-white font-bold text-xl block">{skill.name}</span>
+                          <span className="text-orange-300 text-base font-semibold">{skill.status}</span>
                         </div>
                       </div>
                     </div>
                   ))}
 
+                  {/* Responsive Exploring Next section */}
                   <div className="mt-10 p-7 bg-gradient-to-br from-slate-900/90 to-slate-800/70 rounded-2xl border border-slate-600/40 backdrop-blur-sm shadow-xl">
                     <h4 className="text-white font-extrabold mb-6 flex items-center text-xl">
                       <div className="w-9 h-9 bg-gradient-to-br from-pink-500 to-violet-600 rounded-lg flex items-center justify-center mr-4 shadow-lg">
@@ -121,11 +118,34 @@ const Skills = () => {
                       </div>
                       Exploring Next:
                     </h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      {['Bootstrap', 'AWS', 'MongoDB', 'TypeScript'].map((tech) => (
+                    {/* Responsive grid */}
+                    <div className="
+                      grid
+                      gap-3
+                      grid-cols-1
+                      sm:grid-cols-2
+                      md:grid-cols-2
+                      lg:grid-cols-2
+                      items-center
+                    ">
+                      {exploringNext.map((tech) => (
                         <div
                           key={tech}
-                          className="px-5 py-4 bg-gradient-to-br from-slate-700/70 to-slate-600/50 hover:from-pink-600/40 hover:to-violet-600/40 text-gray-200 hover:text-pink-300 rounded-xl text-base font-bold transition-all duration-300 text-center border border-slate-600/50 hover:border-pink-400/60 shadow-md hover:shadow-lg transform hover:scale-105 cursor-default"
+                          className="
+                            px-5 py-4
+                            bg-gradient-to-br
+                            from-slate-700/70 to-slate-600/50
+                            hover:from-pink-600/40 hover:to-violet-600/40
+                            text-gray-200 hover:text-pink-300
+                            rounded-xl
+                            text-base font-bold
+                            transition-all duration-300
+                            text-center
+                            border border-slate-600/50 hover:border-pink-400/60
+                            shadow-md hover:shadow-lg
+                            transform hover:scale-105
+                            cursor-default
+                          "
                         >
                           {tech}
                         </div>
@@ -135,6 +155,7 @@ const Skills = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

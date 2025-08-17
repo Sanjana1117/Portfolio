@@ -69,12 +69,12 @@ const Hero = () => {
               ))}
             </div>
 
-            {/* Action buttons */}
+            {/* Action buttons: Only "View Resume" and "Get In Touch" */}
             <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center mb-16 animate-fade-in-delay-3">
-              <button
-                onClick={() =>
-                  document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
-                }
+              <a
+                href="/Sanjana.pdf" // Change this to your actual resume path!
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
                   px-10 py-3 bg-gradient-to-tr from-cyan-400 to-purple-500
                   shadow-lg rounded-xl text-white font-bold text-lg
@@ -82,10 +82,12 @@ const Hero = () => {
                   hover:shadow-pink-400/40
                   transition-all duration-200 transform hover:scale-110
                   border border-slate-700
+                  text-center
                 "
+                aria-label="View Resume"
               >
-                View My Work
-              </button>
+                View Resume
+              </a>
               <button
                 onClick={() =>
                   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -103,17 +105,20 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile Image */}
-                    <div className="flex flex-col lg:flex-row items-center lg:items-center gap-17">
-            {/* ...text... */}
-            <div className="flex-shrink-0 mt-20 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl ring-4 ring-purple-500 ring-opacity-70 animate-fade-in-delay-2">
-              <img
-                src="/san_profile.jpg"
-                alt="Sanjana Profile"
-                className="object-cover w-full h-full"
-                loading="lazy"
-              />
-            </div>
+          {/* Profile Image (with pop on hover) */}
+          <div className="
+            flex-shrink-0 mt-20
+            w-48 h-48 md:w-64 md:h-64
+            rounded-full overflow-hidden shadow-2xl ring-4 ring-purple-500 ring-opacity-70
+            transition-all duration-300 ease-in-out
+            hover:scale-105 hover:ring-pink-400 hover:ring-opacity-80 hover:shadow-pink-400/40
+          ">
+            <img
+              src="/san_profile.jpg"
+              alt="Sanjana Profile"
+              className="object-cover w-full h-full"
+              loading="lazy"
+            />
           </div>
         </div>
 
